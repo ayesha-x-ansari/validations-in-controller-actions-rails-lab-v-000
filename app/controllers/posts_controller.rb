@@ -13,13 +13,12 @@ class PostsController < ApplicationController
     else
       render :edit
     end
-
   end
 
   private
 
   def post_params
-    params.permit(:category, :content, :title)
+    params.permit(:title, :category, :content)
   end
 
   def set_post!
